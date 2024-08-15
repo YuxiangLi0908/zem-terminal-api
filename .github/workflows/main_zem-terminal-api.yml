@@ -28,10 +28,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          echo "The uvicorn version installed is:"
-          uvicorn --version
+        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
@@ -68,9 +65,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B1BC11C75B154912AF124DC393398D15 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_EAFB2A2CB3AC4F9F915E1FB328B1A3C8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_98430D785A3C4ACC850A36C4464AD82E }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1A27BB3E56A04311A432C25004C39C22 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_30364DB97E294E4F91DD81E7EB56D456 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_67EA6308CF28471DA3AF468659675E18 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
