@@ -32,5 +32,6 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 async def read_db():
     # cursor = conn.cursor()
     # return {"tables": text(cursor.execute("SELECT * FROM information_schema.tables"))}
-    df = pd.read_sql('SELECT * FROM information_schema.tables', con=conn)
+    # df = pd.read_sql('SELECT * FROM information_schema.tables', con=conn)
+    df = pd.read_sql("SELECT * FROM public.warehouse_vessel WHERE vessel_eta > '2024-08-01'", con=conn)
     return {"tables": df.to_dict()}
