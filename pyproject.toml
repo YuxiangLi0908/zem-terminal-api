@@ -7,10 +7,15 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.112.0"
 uvicorn = "^0.30.6"
 gunicorn = "^23.0.0"
+h11 = "^0.14.0"
+fastapi = "^0.110.0"
 
+
+[tool.poetry.group.app.dependencies]
+fastapi = {version = "0.110.0", extras = ["all"]}
+h11 = "^0.14.0"
 
 [build-system]
 requires = ["poetry-core"]
