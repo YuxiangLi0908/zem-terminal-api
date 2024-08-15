@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "zem-terminal-api"
+version = "0.0.1"
+description = "zem terminal api service"
+authors = ["Yuxiang Li"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.12.4"
+fastapi = "^0.112.0"
+uvicorn = "^0.30.6"
+gunicorn = "^23.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
