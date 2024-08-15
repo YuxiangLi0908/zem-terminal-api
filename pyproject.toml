@@ -11,6 +11,8 @@ uvicorn = "^0.30.6"
 gunicorn = "^23.0.0"
 h11 = "^0.14.0"
 fastapi = "^0.110.0"
+psycopg2 = "^2.9.9"
+sqlalchemy = "^2.0.32"
 
 
 [tool.poetry.group.app.dependencies]
