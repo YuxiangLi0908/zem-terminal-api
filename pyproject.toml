@@ -13,6 +13,7 @@ h11 = "^0.14.0"
 fastapi = "^0.110.0"
 psycopg2 = "^2.9.9"
 sqlalchemy = "^2.0.32"
+pandas = "^2.2.2"
 
 
 [tool.poetry.group.app.dependencies]

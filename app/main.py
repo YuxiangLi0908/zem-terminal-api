@@ -1,4 +1,5 @@
 from typing import Union
+import pandas as pd
 
 from sqlalchemy import text
 from fastapi import FastAPI
@@ -29,6 +30,7 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 
 @app.get("/dbtest")
 async def read_db():
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM information_schema.tables")
-
+    # cursor = conn.cursor()
+    # return {"tables": text(cursor.execute("SELECT * FROM information_schema.tables"))}
+    df = pd.read_sql('SELECT * FROM information_schema.tables', con=conn)
+    return {"tables": df.to_dict()}
