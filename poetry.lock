@@ -307,7 +307,22 @@ h11 = ">=0.8"
 [package.extras]
 standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)", "pyyaml (>=5.1)", "uvloop (>=0.14.0,!=0.15.0,!=0.15.1)", "watchfiles (>=0.13)", "websockets (>=10.4)"]
 
+[[package]]
+name = "uvicorn-worker"
+version = "0.2.0"
+description = "Uvicorn worker for Gunicorn! ✨"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "uvicorn_worker-0.2.0-py3-none-any.whl", hash = "sha256:65dcef25ab80a62e0919640f9582216ee05b3bb1dc2f0e58b354ca0511c398fb"},
+    {file = "uvicorn_worker-0.2.0.tar.gz", hash = "sha256:f6894544391796be6eeed37d48cae9d7739e5a105f7e37061eccef2eac5a0295"},
+]
+
+[package.dependencies]
+gunicorn = ">=20.1.0"
+uvicorn = ">=0.14.0"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "3.12.4"
-content-hash = "0a08e14d436e62442848929119e35c1fc67a0a22b97508bf38e0f3e3dd4b4cdd"
+content-hash = "eaf8805bc23e9799436698331c3c5008802b58b90e213579440e95c301c37fb6"
